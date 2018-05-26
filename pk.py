@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import psycopg2
 
 DBNAME = "news"
@@ -101,6 +102,7 @@ def get_days_with_errors():
         date = i[0].strftime('%B %d, %Y')
         errors = str(round(i[1]*100, 1)) + "%" + " errors"
         print(date + " -- " + errors)
+
 
 print('results...\n')
 get_top_articles()
